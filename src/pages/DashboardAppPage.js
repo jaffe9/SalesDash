@@ -20,24 +20,10 @@ import {
 
 let varUserName = "";
 
-fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
-    .then(
-    function(response) {
-        if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-            response.status);
-        return;
-        }
-
-        // Examine the text in the response
-        response.json().then(function(data) {
-        console.log(data);
-        });
-    }
-    )
-    .catch(function(err) {
-    console.log('Fetch Error :-S', err);
-    });
+fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
 // ----------------------------------------------------------------------
 
 export default function DashboardAppPage() {
