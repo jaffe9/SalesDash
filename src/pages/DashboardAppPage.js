@@ -18,6 +18,17 @@ import {
   AppConversionRates,
 } from '../sections/@dashboard/app';
 
+const varUserName = "";
+
+fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
+  .then(response => response.json())
+  .then(data => {
+    varUserName = data[0].userName
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
 // ----------------------------------------------------------------------
 
 export default function DashboardAppPage() {
@@ -31,7 +42,7 @@ export default function DashboardAppPage() {
 
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+          Hi, ' + varUserName + '
         </Typography>
 
         <Grid container spacing={3}>
