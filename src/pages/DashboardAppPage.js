@@ -23,6 +23,7 @@ let varUserName = "";
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
   .then(response => response.json())
   .then(data => console.log(data))
+  .then(alert(data))
   .then(data => {
     varUserName = data[0].userName
   })
@@ -34,7 +35,6 @@ fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr'
 
 export default function DashboardAppPage() {
   const theme = useTheme();
-  alert(varUserName);
   return (
     <>
       <Helmet>
