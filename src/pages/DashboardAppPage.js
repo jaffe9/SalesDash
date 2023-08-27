@@ -22,8 +22,8 @@ let varUserName = "";
 
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
   .then(response => response.json())
-  .then(data => console.log(data))
-  .then(alert(data))
+  .then(data => console.log("Data:"+data))
+  .then(alert("Date:" + data))
   .then(data => {
     varUserName = data[0].userName
   })
