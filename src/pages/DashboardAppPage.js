@@ -17,7 +17,8 @@ import {
   AppCurrentSubject,
   AppConversionRates,
 } from '../sections/@dashboard/app';
-
+function getUserName()
+{
 let varUserName = "";
 const options = {
   method: 'GET',
@@ -35,19 +36,21 @@ fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr'
   .then(() => {
     console.log(varUserName);
    });
+  return varUserName;
 // ----------------------------------------------------------------------
-
+}
 export default function DashboardAppPage() {
   const theme = useTheme();
+  let txtUserName = getUserName();
   return (
     <>
       <Helmet>
         <title> Dashboard | Minimal UI </title>
       </Helmet>
-
+      
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, + {varUserName} + !!
+          Hi, + {txtUserName} + !!
         </Typography>
 
         <Grid container spacing={3}>
