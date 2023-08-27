@@ -33,7 +33,7 @@ fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr'
 
 export default function DashboardAppPage() {
   const theme = useTheme();
-
+  alert(varUserName);
   return (
     <>
       <Helmet>
