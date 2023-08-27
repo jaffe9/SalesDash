@@ -22,10 +22,10 @@ let varUserName = "";
 
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
   .then(response => response.json())
-  .then(data => console.log("Data:"+data))
-  .then(alert("Date:" + data))
-  .then(data => {
-    varUserName = data[0].userName
+  .then(response => console.log("Data:"+response))
+  .then(alert("Data:" + response))
+  .then(response => {
+    varUserName = response[0].userName
   })
   .catch(error => {
     console.error('Error fetching data:', error);
