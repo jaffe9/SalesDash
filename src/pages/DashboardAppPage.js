@@ -18,7 +18,7 @@ import {
   AppConversionRates,
 } from '../sections/@dashboard/app';
 
-const varUserName = "";
+var varUserName = "";
 
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
   .then(response => response.json())
