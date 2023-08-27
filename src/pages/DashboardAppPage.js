@@ -21,16 +21,23 @@ import {
 let varUserName = "";
 
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr')
-  .then(response => response.json())
-  .then(response => console.log("Data:"+response))
-  .then(alert("Data:" + response))
-  .then(response => {
-    varUserName = response[0].userName
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+    .then(
+    function(response) {
+        if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+        return;
+        }
 
+        // Examine the text in the response
+        response.json().then(function(data) {
+        console.log(data);
+        });
+    }
+    )
+    .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+    });
 // ----------------------------------------------------------------------
 
 export default function DashboardAppPage() {
