@@ -41,7 +41,7 @@ fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr'
 }
 export default function DashboardAppPage() {
   const theme = useTheme();
-  let txtUserName = getUserName();
+  const txtUserName = getUserName();
   return (
     <>
       <Helmet>
