@@ -25,7 +25,7 @@ fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr'
     varUserName = data[0].userName;
    })
   .then(() => {
-    console.log(obj);
+    console.log(varUserName);
    });
 // ----------------------------------------------------------------------
 
