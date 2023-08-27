@@ -130,7 +130,7 @@ export default function DashboardAppPage() {
               title="Conversion Rates"
               subheader="(+43%) than last year"
               chartData={[
-                { label: 'Italy', value: 400 },
+                { label: varUserName, value: 400 },
                 { label: 'Japan', value: 430 },
                 { label: 'China', value: 448 },
                 { label: 'Canada', value: 470 },
