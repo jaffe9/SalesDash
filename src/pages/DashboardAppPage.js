@@ -30,7 +30,7 @@ const options = {
 fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
   .then(res => res.json())
   .then(data => {
-    varUserName = data;
+    varUserName = data[0].userName;
    })
   .then(() => {
     console.log(varUserName);
