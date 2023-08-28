@@ -52,7 +52,7 @@ export default function DashboardAppPage() {
       
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, + {txtUserName} + !!
+          Hi, + ${txtUserName} + !!
         </Typography>
 
         <Grid container spacing={3}>
