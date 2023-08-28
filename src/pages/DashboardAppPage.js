@@ -43,6 +43,7 @@ function getUserName()
 export default function DashboardAppPage() {
   const theme = useTheme();
   const txtUserName = getUserName();
+  console.log("Username:" + txtUserName);
   return (
     <>
       <Helmet>
