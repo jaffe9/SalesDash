@@ -21,7 +21,6 @@ import {
 
 export default function DashboardAppPage() {
   const theme = useTheme();
-  let txtUserName = "";
   function getUserName()
   {
       const options = {
@@ -35,15 +34,9 @@ export default function DashboardAppPage() {
       fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
         .then(res => res.json())
         .then(data => {
-          txtUserName = data[0].userName;
-         })
-        .then(() => {
-          console.log(txtUserName);
+          return data[0].userName;
          });
-        return txtUserName;
-      // ----------------------------------------------------------------------
   }
-  alert(txtUserName);
   return (
     <>
       <Helmet>
@@ -52,7 +45,7 @@ export default function DashboardAppPage() {
       
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, {txtUserName}!!
+          Hi, {getUserName()}!!
         </Typography>
 
         <Grid container spacing={3}>
