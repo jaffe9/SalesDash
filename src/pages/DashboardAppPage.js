@@ -24,7 +24,7 @@ export default function DashboardAppPage() {
   const theme = useTheme();
   function getUserName()
   {
-    let txtUserName = "";
+      let txtUserName = "";
       const options = {
         method: 'GET',
         headers: {
@@ -35,10 +35,8 @@ export default function DashboardAppPage() {
       };
       fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
         .then(res => res.json())
-        .then(data => {
-          txtUserName =  data[0].userName;
-         });
-        return txtUserName;
+        .then(data => { txtUserName =  data[0].userName; });
+      return txtUserName;
   }
   return (
     <>
@@ -131,7 +129,7 @@ export default function DashboardAppPage() {
               title="Conversion Rates"
               subheader="(+43%) than last year"
               chartData={[
-                { label: {getUserName()}, value: 400 },
+                { label: getUserName(), value: 400 },
                 { label: 'Japan', value: 430 },
                 { label: 'China', value: 448 },
                 { label: 'Canada', value: 470 },
