@@ -23,6 +23,7 @@ export default function DashboardAppPage() {
   const theme = useTheme();
   function getUserName()
   {
+    let txtUserName = "";
       const options = {
         method: 'GET',
         headers: {
@@ -34,9 +35,9 @@ export default function DashboardAppPage() {
       fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
         .then(res => res.json())
         .then(data => {
-          return data[0].userName;
+          a =  data[0].userName;
          });
-        return txtUserName;
+        return a;
   }
   return (
     <>
