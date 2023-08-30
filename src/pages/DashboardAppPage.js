@@ -22,21 +22,23 @@ import {
 export default function DashboardAppPage() {
   const theme = useTheme();
   function getUserName()
-  {
-      const options = {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuem1hc3Jrbm5scGR5Z2FvamtwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIzNzEzOTgsImV4cCI6MjAwNzk0NzM5OH0.xjTQANxjAKnEE7VTnlnbyJRx8-Sfap1iwWFeRKrLXP0',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuem1hc3Jrbm5scGR5Z2FvamtwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIzNzEzOTgsImV4cCI6MjAwNzk0NzM5OH0.xjTQANxjAKnEE7VTnlnbyJRx8-Sfap1iwWFeRKrLXP0',
-        }
-      };
-      fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
-        .then(res => res.json())
-        .then(data => {
-          return data[0].userName;
-         });
-  }
+    {
+        const options = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuem1hc3Jrbm5scGR5Z2FvamtwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIzNzEzOTgsImV4cCI6MjAwNzk0NzM5OH0.xjTQANxjAKnEE7VTnlnbyJRx8-Sfap1iwWFeRKrLXP0',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBuem1hc3Jrbm5scGR5Z2FvamtwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTIzNzEzOTgsImV4cCI6MjAwNzk0NzM5OH0.xjTQANxjAKnEE7VTnlnbyJRx8-Sfap1iwWFeRKrLXP0',
+          }
+        };
+        fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
+          .then(res => res.json())
+          .then(data => {
+            txtUserName = data[0].userName;
+           });
+          return txtUserName;
+        // ----------------------------------------------------------------------
+    }
   return (
     <>
       <Helmet>
