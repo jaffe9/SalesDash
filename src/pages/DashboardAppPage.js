@@ -24,7 +24,6 @@ export default function DashboardAppPage() {
   let txtUserName = "";
   function getUserName()
   {
-      let txtUserName = "";
       const options = {
         method: 'GET',
         headers: {
