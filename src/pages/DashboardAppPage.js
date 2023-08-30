@@ -36,6 +36,7 @@ export default function DashboardAppPage() {
       fetch('https://pnzmasrknnlpdygaojkp.supabase.co/rest/v1/Users?userName=eq.jenzr', options)
         .then(res => res.json())
         .then(data => { txtUserName =  data[0].userName; });
+      console.log(txtUserName);
       return txtUserName;
   }
   return (
