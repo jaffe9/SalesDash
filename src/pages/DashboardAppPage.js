@@ -37,6 +37,7 @@ export default function DashboardAppPage() {
         .then(res => res.json())
         .then(data => { txtUserName =  data[0].userName; });
       console.log(txtUserName);
+      alert(txtUserName);
       return txtUserName;
   }
   return (
